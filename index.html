@@ -67,6 +67,90 @@ body {
 }
 @keyframes pulse { 0%,100%{opacity:0.7} 50%{opacity:1} }
 
+
+/* ============ COMPREHENSIVE MOBILE FIX ============ */
+@media(max-width:768px) {
+  /* Hero section */
+  .hero { padding:90px 20px 60px; min-height:100vh; }
+  .hero-logo-wrap img { width:220px; }
+  .hero-tagline { font-size:22px; letter-spacing:1px; }
+  .hero-desc { font-size:13px; line-height:1.9; padding:0 8px; }
+  .hero-eyebrow { font-size:7.5px; letter-spacing:3px; }
+  .hrb-text { font-size:8px; letter-spacing:1.5px; }
+  .stat-item { padding:20px 24px; }
+  .stat-num { font-size:26px; }
+  .stat-label { font-size:7px; }
+  .hero-stats { border-top:0.5px solid var(--line); }
+
+  /* Section titles */
+  .section-title { font-size:30px !important; }
+  .section-body { font-size:13px; }
+
+  /* About */
+  .about-grid { grid-template-columns:1fr; gap:40px; }
+  .warranty-num { font-size:64px; }
+  .about-features { grid-template-columns:1fr; }
+
+  /* Services */
+  .services-header .section-title { font-size:30px !important; }
+  .service-card { padding:32px 24px; }
+  .service-title { font-size:15px; }
+  .service-desc { font-size:13px; }
+
+  /* Process */
+  .process-steps { flex-direction:column; gap:0; }
+  .process-step { padding:24px 0; border-right:none; border-bottom:0.5px solid var(--line); }
+  .process-step:last-child { border-bottom:none; }
+
+  /* Why us */
+  .whyus-grid { grid-template-columns:1fr; }
+  .why-card { padding:28px 20px; }
+
+  /* Enquiry form */
+  .enquiry-inner { padding:0 4px; }
+  .enquiry-form-wrap { padding:28px 20px; }
+  .form-grid { grid-template-columns:1fr; gap:0; }
+  label { font-size:10px; }
+  input, select, textarea { font-size:14px; padding:12px 10px; }
+  .submit-btn { font-size:11px; padding:18px; }
+  .enquiry-contact { flex-direction:column; gap:16px; text-align:center; }
+  .ec-item { padding:12px 0; border-right:none; border-bottom:0.5px solid var(--line); }
+  .ec-item:last-child { border-bottom:none; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns:1fr; gap:28px; }
+  .footer-col h4 { font-size:10px; margin-bottom:16px; }
+  .footer-col p, .footer-col li, .footer-col a { font-size:12px; }
+  .footer-bottom p { font-size:9px; text-align:center; }
+
+  /* Nav */
+  nav { height:62px; padding:0 16px; }
+  .nav-logo img { height:36px; }
+
+  /* Partners */
+  .partners-grid { grid-template-columns:repeat(2,1fr); gap:1px; }
+
+  /* Gallery */
+  .gallery-grid { grid-template-columns:1fr; }
+
+  /* Catalogue */
+  .catalogue-cards { grid-template-columns:1fr; }
+  .cat-card { padding:32px 24px; }
+
+  /* Application section */
+  .app-grid { grid-template-columns:1fr; gap:40px; }
+}
+
+@media(max-width:400px) {
+  .hero-logo-wrap img { width:180px; }
+  .hero-tagline { font-size:19px; }
+  .section-title { font-size:26px !important; }
+  .hero { padding:80px 16px 50px; }
+  .section { padding:52px 16px; }
+  .warranty-num { font-size:52px; }
+  nav { padding:0 12px; }
+}
+
 /* HERO RESIN BADGE */
 .hero-resin-badge {
   display:flex; align-items:center; justify-content:center;
