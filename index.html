@@ -165,9 +165,10 @@ nav.scrolled .nav-logo img { height:36px; }
   position:absolute; inset:0;
   background:linear-gradient(
     to bottom,
-    rgba(26,25,23,0.55) 0%,
-    rgba(26,25,23,0.35) 40%,
-    rgba(26,25,23,0.65) 100%
+    rgba(26,25,23,0.60) 0%,
+    rgba(26,25,23,0.50) 35%,
+    rgba(26,25,23,0.85) 70%,
+    rgba(26,25,23,0.97) 100%
   );
   z-index:1;
 }
@@ -813,26 +814,31 @@ nav.scrolled .nav-logo img { height:36px; }
   background:linear-gradient(90deg, transparent, var(--brass), transparent);
 }
 .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-.form-field { margin-bottom:28px; }
+.form-field { margin-bottom:32px; }
 .form-field.full { grid-column:span 2; }
 label {
   display:block;
   font-family:'Raleway', sans-serif;
-  font-size:8px; letter-spacing:3px; font-weight:600;
-  color:var(--muted); margin-bottom:10px;
+  font-size:11px; letter-spacing:2px; font-weight:700;
+  color:var(--brass); margin-bottom:12px;
 }
 .req { color:var(--red); }
 input, select, textarea {
-  width:100%; background:transparent;
-  border:none; border-bottom:0.5px solid rgba(201,160,90,0.2);
-  padding:10px 0; color:var(--brass);
+  width:100%; background:rgba(201,168,76,0.04);
+  border:none; border-bottom:1px solid rgba(201,160,90,0.45);
+  padding:14px 12px; color:var(--brass);
   font-family:'Montserrat', sans-serif;
-  font-size:13px; font-weight:300;
+  font-size:14px; font-weight:400;
   outline:none; -webkit-appearance:none; appearance:none;
-  transition:border-color 0.3s;
+  transition:all 0.3s;
+  border-radius:2px;
 }
-input:focus, select:focus, textarea:focus { border-bottom-color:var(--brass); }
-input::placeholder, textarea::placeholder { color:var(--dim); font-size:11.5px; }
+input:focus, select:focus, textarea:focus { 
+  border-bottom-color:var(--brass); 
+  background:rgba(201,168,76,0.08);
+  outline:none;
+}
+input::placeholder, textarea::placeholder { color:rgba(201,168,76,0.45); font-size:13px; }
 select {
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%23C9A05A44'/%3E%3C/svg%3E");
   background-repeat:no-repeat; background-position:right 2px center;
@@ -849,9 +855,9 @@ textarea:focus { border-color:rgba(201,160,90,0.3); }
 .submit-btn {
   width:100%; background:var(--brass);
   border:none; color:var(--dark);
-  padding:18px; margin-top:8px;
+  padding:20px; margin-top:12px;
   font-family:'Raleway', sans-serif;
-  font-size:10px; letter-spacing:5px; font-weight:700;
+  font-size:12px; letter-spacing:4px; font-weight:700;
   cursor:pointer; transition:all 0.3s;
   clip-path:polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
 }
@@ -1124,7 +1130,7 @@ footer {
 <section class="hero" id="home">
   <div class="hero-bg">
   <video autoplay muted loop playsinline id="heroBgVideo"
-    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45;z-index:0;">
+    style="position:absolute;inset:0;width:100%;height:130%;top:-15%;object-fit:cover;opacity:0.55;z-index:0;">
     <source src="Monolito_Logo_and_Font_Request.mp4" type="video/mp4">
   </video>
 </div>
