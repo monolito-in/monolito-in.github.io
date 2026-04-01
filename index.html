@@ -1782,8 +1782,29 @@ function submitEnquiry() {
     alert('Please fill in all required fields.');
     return;
   }
-  document.getElementById('enquiryForm').style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
+  var data = {
+    name: n,
+    mobile: m,
+    email: document.getElementById('femail').value.trim(),
+    city: c,
+    space: s,
+    budget: document.getElementById('fbudget').value,
+    vision: document.getElementById('fvision').value.trim()
+  };
+  fetch('https://formspree.io/f/xpqoldnk', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(function(response) {
+    if(response.ok) {
+      document.getElementById('enquiryForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      alert('Something went wrong. Please try again or call us directly.');
+    }
+  }).catch(function() {
+    alert('Network error. Please try again or call us directly.');
+  });
 }
 </script>
 
